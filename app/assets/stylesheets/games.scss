@@ -106,11 +106,13 @@
 // Taja' Hangman 
 
 /* Variabes */  
+
 $orange: #ffa600;
 $green: #82d2e5;
 $grey: #545A69;
 $white: #fff;
-$base-color:$green ;
+$base-color:$green;
+
 
 /* Mixin's */ 
 
@@ -168,10 +170,14 @@ $base-color:$green ;
   font-size:18px;
 }
 
-.wrappper{
+.wrapper{
   @include clear;
   width:100%;
   margin:0 auto;
+}
+
+#center {
+  padding:0 100px;
 }
 
 
@@ -188,7 +194,7 @@ $base-color:$green ;
    margin:5px 0;
 }
 
-.wrapper  h1 {
+.wrapper h1 {
   font-size: 2.3em;
 }
 
@@ -200,39 +206,110 @@ $base-color:$green ;
   font-size: 1.2em;
 }
 
-#alphabet {
+.wrapper #alphabet {
   @include clear;
   margin:15px auto;
   padding:0;
   max-width:900px;
 }
 
-#my-word ul{
-  list-style: none;
-    li{
-      float: left;
-      padding: 10px;
-      margin: 0 20px;
-    }
-}
-
-
-#alphabet li {
+.wrapper #alphabet li {
   float:left;
   margin: 0 10px 10px 0;
   list-style:none;
   width:35px;
   height:30px;
-  padding-top:10px;
+  padding-top:4px;
   background:$white;
   color:$base-color;
   cursor:pointer;
   @include corners(5px);
-  border: solid 1px $grey;
+/*  border: solid 1px $grey;*/
     
     &:hover{
-      background:$base-color;
+      background-color:$base-color;
       border: solid 1px $white;
       color:$grey;
     }
+}
+
+
+
+/*#hold ul{
+  list-style: none;
+  border: 1px black;
+  padding:0 300px;
+}
+
+#hold ul li {
+  float: left;
+  padding: 10px;
+  margin: 0 10px;
+}
+*/
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+}
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.6em;
+}
+
+.wrapper .active {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.wrapper .active:hover {
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.wrapper #mylives {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+}
+
+.wrapper button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background: #82d2e5;
+  color: #fff;
+  border: solid 1px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+}
+.wrapper button:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border: solid 1px #fff;
+  color: #82d2e5;
 }
